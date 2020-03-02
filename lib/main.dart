@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: SophieColors.black,
       ),
-      initialRoute: '/message',
+      initialRoute: '/',
       routes: {
         '/':(context) => CustomScreen(),
         '/message':(context) => Message(),

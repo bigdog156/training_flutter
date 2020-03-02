@@ -4,7 +4,7 @@ class BaseButton extends StatelessWidget {
   final double h;
   final BoxDecoration boxDecoration;
   final Text text;
-  var click;
+  final click;
   BaseButton({this.w , this.h , this.text, this.boxDecoration, this.click});
   @override
   Widget build(BuildContext context) {
@@ -23,52 +23,14 @@ class BaseButton extends StatelessWidget {
   }
 }
 
-class GradientButton extends StatelessWidget{
-  final String text;
-  final onclick;
-  final BoxDecoration boxDecorationCustom;
-  GradientButton({this.text,this.boxDecorationCustom, this.onclick});
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return GestureDetector(
-      onTap: onclick,
-      child: Container(
-        width: 300,
-        height: 45,
-        decoration: boxDecorationCustom,
-        child: Center(
-            child: Text(text, style: TextStyle(
-                color: Colors.white,
-                fontSize: 15
-            ),)
-        ),
-      ),
-    );
-  }
-}
-BoxDecoration greenGradient(){
-  return BoxDecoration(
-    gradient: LinearGradient(
-      begin: Alignment.centerRight,
-      end: Alignment.centerLeft,
-      colors: [Color(0xFF38EF7D),Color(0xFF2CB9B0)],
-    ),
-    borderRadius: BorderRadius.circular(20),
-  );
-}
-BoxDecoration choiceColor( Color color){
-  return BoxDecoration(
-    color: color,
-    borderRadius: BorderRadius.circular(20),
-  );
-}
 
-class WhileButton extends StatelessWidget{
+class WhiteButton extends StatelessWidget{
   final String text;
   final onclick;
+  final Color colorBg;
+  final Color colorText;
   final BoxDecoration boxDecorationCustom;
-  WhileButton({this.text,this.boxDecorationCustom, this.onclick});
+  WhiteButton({this.text,this.boxDecorationCustom, this.onclick, this.colorBg, this.colorText});
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -77,10 +39,13 @@ class WhileButton extends StatelessWidget{
       child: Container(
         width: 300,
         height: 45,
-        decoration: boxDecorationCustom,
+        decoration: BoxDecoration(
+          color: colorBg,
+          borderRadius: BorderRadius.circular(20),
+        ),
         child: Center(
             child: Text(text, style: TextStyle(
-                color: Colors.black,
+                color: colorText,
                 fontSize: 15
             ),)
         ),

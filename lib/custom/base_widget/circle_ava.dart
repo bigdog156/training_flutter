@@ -1,12 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:sophie/custom/base_widget/color_icon.dart';
 import 'base_widget.dart';
 import 'package:sophie/custom/models/custom_data.dart';
 import 'dart:math';
-class CircleAvatarIcon extends StatelessWidget{
+class CircleAvatarCustom extends StatelessWidget{
   final double radius;
   final ChangeState state;
-  CircleAvatarIcon(this.radius, this.state);
+  CircleAvatarCustom(this.radius, this.state);
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
