@@ -1,11 +1,11 @@
-import 'base_widget.dart';
+import '../base_widget.dart';
 
 class IconCustom extends StatelessWidget{
   final double size;
   final double widthBorder;
   final Color colorBorder;
   final Color color;
-  final Icon icon;
+  final Widget icon;
   IconCustom({this.size, this.color, this.icon,this.colorBorder, this.widthBorder});
   @override
   Widget build(BuildContext context) {

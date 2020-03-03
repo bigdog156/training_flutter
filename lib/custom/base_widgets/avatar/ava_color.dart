@@ -1,18 +1,18 @@
-import 'package:sophie/custom/base_widget/color_icon.dart';
-import 'base_widget.dart';
+import 'package:sophie/custom/base_widgets/Icon/icon_color.dart';
+import '../base_widget.dart';
 import 'package:sophie/custom/models/custom_data.dart';
 import 'dart:math';
-class CircleAvatarCustom extends StatelessWidget{
+class AvatarColor extends StatelessWidget{
   final double radius;
   final ChangeState state;
-  CircleAvatarCustom(this.radius, this.state);
+  AvatarColor({this.radius, this.state});
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container (
       child: Stack(
         children: <Widget>[
-          CircleAvatarBorder(
+          AvatarBorder(
             sizeBorder: 2,
             colorBorder: Colors.white,
             radiusAva: radius,

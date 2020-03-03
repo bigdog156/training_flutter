@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CircleAvatarBorder extends StatelessWidget{
+class AvatarBorder extends StatelessWidget{
   final ImageProvider imageProvider;
   final Color colorBorder;
   final double radiusAva;
   final double sizeBorder;
-  CircleAvatarBorder({
+  AvatarBorder({
     this.imageProvider,
     this.radiusAva,
     this.colorBorder,
