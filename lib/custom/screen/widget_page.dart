@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sophie/custom/base_widgets/base_widget.dart';
 import 'package:sophie/custom/base_widgets/Icon/icon_custom.dart';
+import 'package:sophie/custom/base_widgets/button/button_choicechip.dart';
 import 'package:sophie/custom/components/base_components.dart';
 import 'package:sophie/custom/components/list_items/ava_checkbox.dart';
 import 'package:sophie/custom/components/list_items/ava_state_text.dart';
@@ -30,12 +32,29 @@ class _WidgetPageState extends State<WidgetPage> {
             ),
             showContainer(),
             showItem2(),
+            showCard(),
           ],
         ),
       ],
     );
   }
-
+  Widget showCard(){
+    return  SingleChildScrollView(
+      padding: EdgeInsets.only(left: 20, right: 20, top: 30),
+      child: Column(
+        children: <Widget>[
+          CardInfo(
+            title: "Pepe Go",
+            sub: "UI/UX Designer",
+            colorSub: Colors.black38,
+            radius: 30,
+            imageProvider: AssetImage("assets/girl.jpg"),
+            content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum",
+          )
+        ],
+      ),
+    );
+  }
   Widget showWidget({Widget child}) {
     return Padding(
       padding: EdgeInsets.only(top: 10),
@@ -43,6 +62,7 @@ class _WidgetPageState extends State<WidgetPage> {
     );
   }
   Widget showItem2() {
+    bool state = true;
     return SingleChildScrollView(
       padding: EdgeInsets.only(left: 20, right: 20),
       child: Column(
@@ -51,7 +71,7 @@ class _WidgetPageState extends State<WidgetPage> {
         children: <Widget>[
           SizedBox(height: 10),
           ButtonBase(
-            title: "Create Item",
+            title: "Join us, it's free",
             width: 300,
             height: 45,
             listColor: [Colors.white, Colors.white],
@@ -68,13 +88,27 @@ class _WidgetPageState extends State<WidgetPage> {
               ),
             ),
             icon:
-              IconCustom(
-                size: 40,
-                color: Color(0xFF2CB9B0),
-                widthBorder: 0,
-                colorBorder: Color(0xFF2CB9B0),
-                icon: Icon(Icons.phone, color: Colors.white,size: 20,),
-              ),
+                ButtonCircle(
+                  size: 50,
+                  click: (){},
+                  icon:
+                  Icon(Icons.phone, color: Colors.white,),
+                )
+//              RaisedButton(
+//                shape: CircleBorder(),
+//                onPressed: (){},
+//                child: Ink(
+//                  decoration: BoxDecoration(
+//                    color: Color(0xFF2CB9B0),
+//                    borderRadius: BorderRadius.circular(50),
+//                  ),
+//                  child: Container(
+//                    constraints: BoxConstraints(maxWidth:50, maxHeight: 50),
+//                    alignment: Alignment.center,
+//                    child: Icon(Icons.phone, color: Colors.white, size: 20,),
+//                  )
+//                )
+//              ),
           ),
           SizedBox(height: 10),
           ItemBase(
@@ -99,6 +133,25 @@ class _WidgetPageState extends State<WidgetPage> {
               ),
             ),
             icon: Icon(Icons.arrow_forward_ios, color: Colors.black54,),
+          ),
+          SizedBox(height: 20),
+          ButtonCustom(
+            height: 45,
+            width: 300,
+            listColor: [Colors.white, Colors.white],
+            content: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  AvatarText(
+                    title: "Continues as Micheal",
+                    radius: 17.5,
+                    imageProvider: AssetImage("assets/girl.jpg"),
+                    icon: Icon(Icons.arrow_forward),
+                  )
+                ],
+              ),
+            ),
           ),
         ],
       ),
@@ -175,7 +228,6 @@ class _WidgetPageState extends State<WidgetPage> {
               size: 20,
             ),
           ),
-
         ],
       ),
     );
