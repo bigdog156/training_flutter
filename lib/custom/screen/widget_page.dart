@@ -28,7 +28,8 @@ class _WidgetPageState extends State<WidgetPage> {
                 listColor: [Colors.green, Colors.yellow],
               ),
             ),
-            showContainer()
+            showContainer(),
+            showItem2(),
           ],
         ),
       ],
@@ -41,7 +42,68 @@ class _WidgetPageState extends State<WidgetPage> {
       child: child,
     );
   }
-
+  Widget showItem2() {
+    return SingleChildScrollView(
+      padding: EdgeInsets.only(left: 20, right: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          SizedBox(height: 10),
+          ButtonBase(
+            title: "Create Item",
+            width: 300,
+            height: 45,
+            listColor: [Colors.white, Colors.white],
+            colorText: Colors.black,
+          ),
+          SizedBox(height: 10),
+          ItemBase(
+            avatar: Container(
+              child: TwoLine(
+                title: "Phone Call",
+                sub: "+84966951930",
+                state: ChangeState.online,
+                colorSub: Colors.black38,
+              ),
+            ),
+            icon:
+              IconCustom(
+                size: 40,
+                color: Color(0xFF2CB9B0),
+                widthBorder: 0,
+                colorBorder: Color(0xFF2CB9B0),
+                icon: Icon(Icons.phone, color: Colors.white,size: 20,),
+              ),
+          ),
+          SizedBox(height: 10),
+          ItemBase(
+            avatar: Container(
+              child: Row(
+                children: <Widget>[
+                  IconCustom(
+                    size: 50,
+                    color: Colors.redAccent,
+                    icon: Icon(Icons.person, color: Colors.white,size: 15,),
+                    widthBorder: 0,
+                    colorBorder: Colors.redAccent,
+                  ),
+                  SizedBox(width: 10),
+                  Text("Delete account",
+                  style: TextStyle(
+                    color: Colors.redAccent,
+                    fontSize: 20
+                  ),
+                  )
+                ],
+              ),
+            ),
+            icon: Icon(Icons.arrow_forward_ios, color: Colors.black54,),
+          ),
+        ],
+      ),
+    );
+  }
   Widget showContainer() {
     return SingleChildScrollView(
       padding: EdgeInsets.only(left: 20, right: 20),
@@ -86,7 +148,34 @@ class _WidgetPageState extends State<WidgetPage> {
             title: "Click me",
             radius: 30,
             state: ChangeState.off,
-          )
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          AvatarTwoTextTime(
+            title: "Pepe Go",
+            sub: "Rồi chừng nào đi ...",
+            state: ChangeState.online,
+            time: "5m ago",
+            isIconState: false,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          AvatarTwoTextTime(
+            state: ChangeState.online,
+            time: "2m ago",
+            title: "Pepe Go",
+            sub: "Flutter go go ...",
+            isIconState: true,
+            colorSub: Colors.redAccent,
+            icon: Icon(
+              Icons.phone_missed,
+              color: Colors.redAccent,
+              size: 20,
+            ),
+          ),
+
         ],
       ),
     );

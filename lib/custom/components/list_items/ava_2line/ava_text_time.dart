@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:sophie/custom/base_widgets/avatar/ava_color.dart';
 import 'package:sophie/custom/base_widgets/base_widget.dart';
-import 'package:sophie/custom/base_widgets/text/two_text.dart';
 import 'package:sophie/custom/components/base_components.dart';
-import 'package:sophie/custom/components/list_items/ava_state_text.dart';
 
 class AvatarTwoTextTime extends StatelessWidget{
   final String title;
   final String sub;
   final ChangeState state;
   final String time;
-  AvatarTwoTextTime({this.state, this.time, this.title, this.sub});
+  final bool isIconState;
+  final Widget icon;
+  final Color colorSub;
+  AvatarTwoTextTime({
+    this.colorSub,
+    this.state,
+    this.time,
+    this.title,
+    this.sub,
+    this.isIconState,
+    this.icon,
+  });
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -22,7 +30,13 @@ class AvatarTwoTextTime extends StatelessWidget{
             radius: 30,
           ),
           SizedBox(width: 10,),
-          TwoText(title: title, sub: sub,)
+          isIconState ? TwoLine(title: title,
+            state: state,
+            sub: sub,
+            icon: icon,
+            colorSub: colorSub,
+          ):
+          TwoText(title: title, sub: sub),
         ],
       ),
       icon: Container(

@@ -6,3 +6,5 @@ export 'package:flutter/material.dart';
 export 'avatar/ava_icon.dart';
 export 'func.dart';
 export './text/one_textw400.dart';
+export './text/two_text.dart';
+export './text/two_line.dart';

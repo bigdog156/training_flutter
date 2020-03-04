@@ -6,8 +6,8 @@ class ItemBase extends StatelessWidget {
   final Widget icon;
 
   ItemBase({
-    this.avatar,
-    this.icon,
+    @required this.avatar,
+    @required this.icon,
   });
 
   @override

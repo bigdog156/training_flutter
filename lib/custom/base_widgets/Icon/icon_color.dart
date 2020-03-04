@@ -6,7 +6,7 @@ class ColorIcon extends StatelessWidget{
   final double radiusIcon ;
   final Color borderColor;
   final ChangeState state;
-  ColorIcon(this.widthBorder, this.radiusIcon, this.borderColor, this.state);
+  ColorIcon({this.widthBorder, this.radiusIcon, this.borderColor, this.state});
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

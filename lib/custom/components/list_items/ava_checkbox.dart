@@ -29,7 +29,6 @@ class _AvatarCheckboxState extends State<AvatarCheckbox> {
             value: _tick,
             onChanged: (stg){
               setState(() {
-                print(stg);
                 _tick = !_tick;
               });
             },

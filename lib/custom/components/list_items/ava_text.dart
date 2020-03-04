@@ -34,27 +34,6 @@ class AvatarText extends StatelessWidget{
       ),
       icon: icon
     );
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.7,
-      child: Row(
-        children: <Widget>[
-          AvatarBorder(
-            colorBorder: Colors.grey,
-            imageProvider: imageProvider,
-            radiusAva: radius,
-            sizeBorder: 0,
-          ),
-          Container(
-            padding: EdgeInsets.only(left: 12),
-            child: Text(title, style: TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.w400
-            ),),
-          )
-        ],
-      ),
-    );
   }
 }
 

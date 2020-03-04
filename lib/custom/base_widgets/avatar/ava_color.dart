@@ -21,7 +21,12 @@ class AvatarColor extends StatelessWidget{
           Padding (
             padding: EdgeInsets.only(left: sqrt(radius*radius/2)+radius-6, top: sqrt(radius*radius/2)+radius-4),
             child:
-            ColorIcon(2,6.5,Colors.white, this.state)
+            ColorIcon(
+              state: state,
+              widthBorder: 2,
+              radiusIcon: 6.5,
+              borderColor: Colors.white,
+            )
           )
         ],
       ),
