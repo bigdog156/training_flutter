@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sophie/custom/base_widgets/base_widget.dart';
+import 'package:flutter/widgets.dart';
 import 'package:sophie/custom/base_widgets/Icon/icon_custom.dart';
-import 'package:sophie/custom/base_widgets/button/button_choicechip.dart';
+import 'package:sophie/custom/base_widgets/base_widget.dart';
+import 'package:sophie/custom/base_widgets/button/button_filter_chip.dart';
 import 'package:sophie/custom/components/base_components.dart';
 import 'package:sophie/custom/components/list_items/ava_checkbox.dart';
 import 'package:sophie/custom/components/list_items/ava_state_text.dart';
-import 'package:sophie/custom/models/custom_data.dart';
 
 class WidgetPage extends StatefulWidget {
   @override
@@ -33,13 +32,17 @@ class _WidgetPageState extends State<WidgetPage> {
             showContainer(),
             showItem2(),
             showCard(),
+            ButtonFilterChip(
+              text: Text("Facebook"),
+            ),
           ],
         ),
       ],
     );
   }
-  Widget showCard(){
-    return  SingleChildScrollView(
+
+  Widget showCard() {
+    return SingleChildScrollView(
       padding: EdgeInsets.only(left: 20, right: 20, top: 30),
       child: Column(
         children: <Widget>[
@@ -49,18 +52,21 @@ class _WidgetPageState extends State<WidgetPage> {
             colorSub: Colors.black38,
             radius: 30,
             imageProvider: AssetImage("assets/girl.jpg"),
-            content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum",
+            content:
+                "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum",
           )
         ],
       ),
     );
   }
+
   Widget showWidget({Widget child}) {
     return Padding(
       padding: EdgeInsets.only(top: 10),
       child: child,
     );
   }
+
   Widget showItem2() {
     bool state = true;
     return SingleChildScrollView(
@@ -79,36 +85,22 @@ class _WidgetPageState extends State<WidgetPage> {
           ),
           SizedBox(height: 10),
           ItemBase(
-            avatar: Container(
-              child: TwoLine(
-                title: "Phone Call",
-                sub: "+84966951930",
-                state: ChangeState.online,
-                colorSub: Colors.black38,
+              avatar: Container(
+                child: TwoLine(
+                  title: "Phone Call",
+                  sub: "+84966951930",
+                  state: ChangeState.online,
+                  colorSub: Colors.black38,
+                ),
               ),
-            ),
-            icon:
-                ButtonCircle(
-                  size: 50,
-                  click: (){},
-                  icon:
-                  Icon(Icons.phone, color: Colors.white,),
-                )
-//              RaisedButton(
-//                shape: CircleBorder(),
-//                onPressed: (){},
-//                child: Ink(
-//                  decoration: BoxDecoration(
-//                    color: Color(0xFF2CB9B0),
-//                    borderRadius: BorderRadius.circular(50),
-//                  ),
-//                  child: Container(
-//                    constraints: BoxConstraints(maxWidth:50, maxHeight: 50),
-//                    alignment: Alignment.center,
-//                    child: Icon(Icons.phone, color: Colors.white, size: 20,),
-//                  )
-//                )
-//              ),
+              icon: ButtonCircle(
+                size: 50,
+                click: () {},
+                icon: Icon(
+                  Icons.phone,
+                  color: Colors.white,
+                ),
+              )
           ),
           SizedBox(height: 10),
           ItemBase(
@@ -118,21 +110,26 @@ class _WidgetPageState extends State<WidgetPage> {
                   IconCustom(
                     size: 50,
                     color: Colors.redAccent,
-                    icon: Icon(Icons.person, color: Colors.white,size: 15,),
+                    icon: Icon(
+                      Icons.person,
+                      color: Colors.white,
+                      size: 15,
+                    ),
                     widthBorder: 0,
                     colorBorder: Colors.redAccent,
                   ),
                   SizedBox(width: 10),
-                  Text("Delete account",
-                  style: TextStyle(
-                    color: Colors.redAccent,
-                    fontSize: 20
-                  ),
+                  Text(
+                    "Delete account",
+                    style: TextStyle(color: Colors.redAccent, fontSize: 20),
                   )
                 ],
               ),
             ),
-            icon: Icon(Icons.arrow_forward_ios, color: Colors.black54,),
+            icon: Icon(
+              Icons.arrow_forward_ios,
+              color: Colors.black54,
+            ),
           ),
           SizedBox(height: 20),
           ButtonCustom(
@@ -157,6 +154,7 @@ class _WidgetPageState extends State<WidgetPage> {
       ),
     );
   }
+
   Widget showContainer() {
     return SingleChildScrollView(
       padding: EdgeInsets.only(left: 20, right: 20),
