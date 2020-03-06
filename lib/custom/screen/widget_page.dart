@@ -4,6 +4,7 @@ import 'package:sophie/custom/base_widgets/Icon/icon_custom.dart';
 import 'package:sophie/custom/base_widgets/base_widget.dart';
 import 'package:sophie/custom/base_widgets/button/button_filter_chip.dart';
 import 'package:sophie/custom/components/base_components.dart';
+import 'package:sophie/custom/components/card_items/card_gender.dart';
 import 'package:sophie/custom/components/list_items/ava_checkbox.dart';
 import 'package:sophie/custom/components/list_items/ava_state_text.dart';
 
@@ -35,6 +36,15 @@ class _WidgetPageState extends State<WidgetPage> {
             ButtonFilterChip(
               text: Text("Facebook"),
             ),
+            CardGender(
+              height: 160,
+              width: 140,
+              gender: "Male",
+              icon: Image.asset(
+              "assets/man.png",
+              ),
+            ),
+            SizedBox(height: 20,)
           ],
         ),
       ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sophie/custom/models/custom_data.dart';
+import 'package:sophie/custom/screen/components_page.dart';
 import 'package:sophie/custom/screen/widget_page.dart';
 class CustomScreen extends StatefulWidget {
   @override
@@ -50,7 +51,7 @@ class _CustomScreenState extends State<CustomScreen> {
         body: TabBarView(
           children: <Widget>[
             WidgetPage(),
-            Container()
+            ComponentPage()
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
