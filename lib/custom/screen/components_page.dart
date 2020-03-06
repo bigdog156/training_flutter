@@ -9,6 +9,7 @@ import 'package:sophie/custom/components/base_components.dart';
 import 'package:sophie/custom/components/card_items/card_gender.dart';
 import 'package:sophie/custom/components/list_items/ava_checkbox.dart';
 import 'package:sophie/custom/components/list_items/ava_state_text.dart';
+import 'package:sophie/custom/components/text_input/number_input.dart';
 
 class ComponentPage extends StatefulWidget {
   @override
@@ -22,8 +23,7 @@ class _ComponentPageState extends State<ComponentPage> {
   FocusNode myFocus1;
   FocusNode myFocus2;
   FocusNode myFocus3;
-  int oldValue = 0;
-  int newValue = 0;
+
 
   @override
   void initState() {
@@ -55,63 +55,22 @@ class _ComponentPageState extends State<ComponentPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Container(
-                width: 65,
-                child: TextFormField(
-                    focusNode: myFocus1,
-                    onChanged: (value) {
-                      print(value);
-                      if (int.parse(value) >= 0) {
-                        FocusScope.of(context).requestFocus(myFocus2);
-                      }
-                    },
-                    autofocus: true,
-                    textAlign: TextAlign.center,
-                    controller: input1,
-                    decoration: new InputDecoration(
-                        border: OutlineInputBorder(),
-                        counterStyle: TextStyle(color: Colors.white)),
-                    maxLength: 1,
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      WhitelistingTextInputFormatter(RegExp("[0-9]")),
-                    ]),
+              NumberInput(
+                myNode: myFocus1,
+                nextNode: myFocus2,
+                controller: input1,
+                autoFocus: true,
               ),
-              Container(
-                width: 65,
-                child: TextFormField(
-                    focusNode: myFocus2,
-                    onChanged: (value) {
-                      if (int.parse(value) >= 0) {
-                        FocusScope.of(context).requestFocus(myFocus3);
-                      }
-                    },
-                    textAlign: TextAlign.center,
-                    controller: input2,
-                    decoration: new InputDecoration(
-                        border: OutlineInputBorder(),
-                        counterStyle: TextStyle(color: Colors.white)),
-                    maxLength: 1,
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      WhitelistingTextInputFormatter(RegExp("[0-9]")),
-                    ]),
+              NumberInput(
+                myNode: myFocus2,
+                nextNode: myFocus3,
+                controller: input2,
               ),
-              Container(
-                width: 65,
-                child: TextFormField(
-                    focusNode: myFocus3,
-                    textAlign: TextAlign.center,
-                    controller: input3,
-                    decoration: new InputDecoration(
-                        border: OutlineInputBorder(),
-                        counterStyle: TextStyle(color: Colors.white)),
-                    maxLength: 1,
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      WhitelistingTextInputFormatter(RegExp("[0-9]")),
-                    ]),
-              ),
+              NumberInput(
+                myNode: myFocus3,
+                nextNode: myFocus3,
+                controller: input3,
+              )
             ],
           ),
           Container(
