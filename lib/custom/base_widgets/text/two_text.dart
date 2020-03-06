@@ -10,6 +10,7 @@ class TwoText extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
+      width: 250,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,6 +29,9 @@ class TwoText extends StatelessWidget{
               fontSize: 16,
               color: Colors.black54
             ),
+            softWrap: true,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
           )
         ],
       ),

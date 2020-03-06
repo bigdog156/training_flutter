@@ -205,7 +205,7 @@ class _WidgetPageState extends State<WidgetPage> {
           ),
           AvatarTwoTextTime(
             title: "Pepe Go",
-            sub: "Rồi chừng nào đi ...",
+            sub: "Rồi chừng nào đi, mai đi hay mốt đi gì tuỳ à. Ủa dĩ har uwfm di dokskskkksjafja ",
             state: ChangeState.online,
             time: "5m ago",
             isIconState: false,
