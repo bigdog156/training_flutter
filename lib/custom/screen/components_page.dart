@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:sophie/chat/models/groups.dart';
+import 'package:sophie/chat/view/groups_page.dart';
 import 'dart:core';
 import 'package:sophie/custom/base_widgets/Icon/icon_custom.dart';
 import 'package:sophie/custom/base_widgets/base_widget.dart';
@@ -23,7 +25,6 @@ class _ComponentPageState extends State<ComponentPage> {
   FocusNode myFocus1;
   FocusNode myFocus2;
   FocusNode myFocus3;
-
 
   @override
   void initState() {
@@ -48,6 +49,7 @@ class _ComponentPageState extends State<ComponentPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Color(0xFFF5F6F6),
       child: Column(
         children: <Widget>[
           SizedBox(height: 20),
@@ -117,7 +119,27 @@ class _ComponentPageState extends State<ComponentPage> {
                 ],
               ),
             ),
-          )
+          ),
+          SizedBox(height: 20),
+          Container(
+            width: 200,
+            height: 230,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10)
+            ),
+//            decoration: BoxDecoration(
+//              boxShadow: [BoxShadow(
+//                color: Colors.grey,
+//                blurRadius: 25.0, // soften the shadow
+//                spreadRadius: 2.0, //extend the shadow
+//                offset: Offset(
+//                  5.0, // Move to right 10  horizontally
+//                  5.0, // Move to bottom 10 Vertically
+//                ),
+//              )],
+//            ),
+            child: cardItem(group1),),
         ],
       ),
     );

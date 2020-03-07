@@ -5,7 +5,8 @@ import 'dart:math';
 class AvatarColor extends StatelessWidget{
   final double radius;
   final ChangeState state;
-  AvatarColor({this.radius, this.state});
+  final String urlImage;
+  AvatarColor({this.radius, this.state, this.urlImage});
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

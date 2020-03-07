@@ -18,6 +18,7 @@ class _NumberInputState extends State<NumberInput> {
     return Container(
       width: 65,
       child: TextFormField(
+        cursorColor: Colors.grey,
           focusNode: widget.myNode,
           onChanged: (value) {
             print(value);
@@ -30,7 +31,10 @@ class _NumberInputState extends State<NumberInput> {
           controller: widget.controller,
           decoration: new InputDecoration(
               border: OutlineInputBorder(),
-              counterStyle: TextStyle(color: Colors.white)),
+              focusColor: Colors.greenAccent,
+              counterStyle: TextStyle(color: Colors.white
+              )
+              ),
           maxLength: 1,
           keyboardType: TextInputType.number,
           inputFormatters: [
