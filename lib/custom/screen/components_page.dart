@@ -92,6 +92,8 @@ class _ComponentPageState extends State<ComponentPage> {
                                 borderRadius: BorderRadius.circular(10)),
                             title: Text("Submit success !"),
                           ));
+                  Duration(seconds: 2);
+                  Navigator.pushNamed(context, "/message");
                 } else {
                   showDialog(
                       context: context,

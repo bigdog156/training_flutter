@@ -32,9 +32,9 @@ class _NumberInputState extends State<NumberInput> {
           decoration: new InputDecoration(
               border: OutlineInputBorder(),
               focusColor: Colors.greenAccent,
-              counterStyle: TextStyle(color: Colors.white
-              )
+              counterStyle: TextStyle(color: Color(0xFFF5F6F6),
               ),
+          ),
           maxLength: 1,
           keyboardType: TextInputType.number,
           inputFormatters: [

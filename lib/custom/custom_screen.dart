@@ -51,7 +51,7 @@ class _CustomScreenState extends State<CustomScreen> {
         body: TabBarView(
           children: <Widget>[
             WidgetPage(),
-            ComponentPage()
+            ComponentPage(),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
