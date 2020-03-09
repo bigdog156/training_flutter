@@ -12,6 +12,7 @@ import 'package:sophie/custom/components/card_items/card_gender.dart';
 import 'package:sophie/custom/components/list_items/ava_checkbox.dart';
 import 'package:sophie/custom/components/list_items/ava_state_text.dart';
 import 'package:sophie/custom/components/text_input/number_input.dart';
+import 'package:sophie/custom/components/text_input/text_input.dart';
 
 class ComponentPage extends StatefulWidget {
   @override
@@ -72,7 +73,8 @@ class _ComponentPageState extends State<ComponentPage> {
                 myNode: myFocus3,
                 nextNode: myFocus3,
                 controller: input3,
-              )
+              ),
+
             ],
           ),
           Container(
@@ -142,6 +144,7 @@ class _ComponentPageState extends State<ComponentPage> {
 //              )],
 //            ),
             child: cardItem(group1),),
+        TextInputCustom()
         ],
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:core';
+
 class NumberInput extends StatefulWidget {
   final FocusNode myNode;
   final FocusNode nextNode;
@@ -16,9 +17,11 @@ class _NumberInputState extends State<NumberInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 65,
+      color: Colors.white,
+      width: 60,
+      margin: EdgeInsets.symmetric(horizontal: 10),
       child: TextFormField(
-        cursorColor: Colors.grey,
+          cursorWidth: 0,
           focusNode: widget.myNode,
           onChanged: (value) {
             print(value);
@@ -30,10 +33,12 @@ class _NumberInputState extends State<NumberInput> {
           textAlign: TextAlign.center,
           controller: widget.controller,
           decoration: new InputDecoration(
+//            enabledBorder: OutlineInputBorder(
+//              borderSide: BorderSide(style: BorderStyle.none),
+//            )
+              helperStyle: TextStyle(fontSize: 0),
               border: OutlineInputBorder(),
-              focusColor: Colors.greenAccent,
-              counterStyle: TextStyle(color: Color(0xFFF5F6F6),
-              ),
+
           ),
           maxLength: 1,
           keyboardType: TextInputType.number,
