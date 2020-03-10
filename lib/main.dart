@@ -4,6 +4,7 @@ import 'package:sophie/chat/view/walkthrough/walkthrough.dart';
 import 'package:sophie/chat/view/create_chat.dart';
 import 'package:sophie/chat/view/splash/splash.dart';
 import 'package:sophie/custom/custom_screen.dart';
+import 'package:sophie/custom/screen/screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -11,15 +12,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: SophieColors.black,
       ),
-      initialRoute: '/',
+      initialRoute: '/splash',
       routes: {
+        '/splash': (context) => SplashPage(),
+        '/splash_dartmode' :(context) => DarkModePage(),
         '/':(context) => CustomScreen(),
         '/message':(context) => Message(),
-        '/walk_through':(context) => WalkThroughScreen(),
+        '/walk_through':(context) => WalkThroughPage(),
         '/create_chat':(context) => CreateChat(),
       },
 //      home: Message(),

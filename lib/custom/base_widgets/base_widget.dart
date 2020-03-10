@@ -10,3 +10,5 @@ export './text/two_text.dart';
 export './text/two_line.dart';
 export './button/button_circle.dart';
 export './button/button_custom.dart';
+export './button/button_text.dart';
+export './button/button_switch.dart';
