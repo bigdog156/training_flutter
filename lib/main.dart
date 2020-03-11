@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/message':(context) => Message(),
         '/walk_through':(context) => WalkThroughPage(),
         '/create_chat':(context) => CreateChat(),
+//        '/test': (context) => ChooseInterestPage(),
       },
 //      home: Message(),
     );

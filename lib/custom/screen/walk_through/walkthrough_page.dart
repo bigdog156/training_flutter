@@ -15,7 +15,7 @@ class WalkThroughPage extends StatelessWidget {
           children: <Widget>[
             GestureDetector(
               onTap: () {
-                print("Next Screen");
+                  Navigator.pushNamed(context, "/");
               },
               child: Container(
                 padding: EdgeInsets.only(
@@ -30,7 +30,7 @@ class WalkThroughPage extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 120),
+              padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.1),
               child: CircleAvatar(
                 backgroundImage: NetworkImage(
                     "https://images.unsplash.com/photo-1521001387824-8ce95375a74e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"),
@@ -79,7 +79,7 @@ class WalkThroughPage extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 30, bottom: 130),
+              padding: EdgeInsets.only(top: 30),
               child: Text(
                 "More than 5M people using us",
                 style: TextStyle(fontSize: 17, color: Colors.black54),

@@ -6,7 +6,7 @@ import 'package:sophie/custom/base_widgets/base_widget.dart';
 class DarkModePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ThemSplashPage(
+    return ThemeSplashPage(
       boxDecoration: BoxDecoration(
         color: Colors.white
       ),
@@ -25,6 +25,7 @@ class DarkModePage extends StatelessWidget {
       ),
       content: Container(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             ButtonSwitch(),
             SizedBox( height: 20,),

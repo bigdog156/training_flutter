@@ -5,7 +5,7 @@ import 'package:sophie/custom/base_widgets/base_widget.dart';
 class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ThemSplashPage(
+    return ThemeSplashPage(
       boxDecoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
