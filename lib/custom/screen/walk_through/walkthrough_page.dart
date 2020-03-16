@@ -15,7 +15,7 @@ class WalkThroughPage extends StatelessWidget {
           children: <Widget>[
             GestureDetector(
               onTap: () {
-                  Navigator.pushNamed(context, "/");
+                Navigator.pushNamed(context, "/message");
               },
               child: Container(
                 padding: EdgeInsets.only(
@@ -55,7 +55,6 @@ class WalkThroughPage extends StatelessWidget {
               child: Text(
                 "Find your all friends in one place by signing the app easily",
                 textAlign: TextAlign.center,
-
                 style: TextStyle(fontSize: 17, color: Colors.black54),
               ),
             ),
@@ -71,7 +70,6 @@ class WalkThroughPage extends StatelessWidget {
                       child: CircleAvatar(
                          backgroundImage: NetworkImage(listUser[index].urlImage),
                           radius: 17.5,
-//                        urlImage: listUser[index].urlImage,radiusImage: 17.5,
                       ),
                     );
                   }),

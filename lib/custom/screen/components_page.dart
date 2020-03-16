@@ -143,7 +143,7 @@ class _ComponentPageState extends State<ComponentPage> {
 //                ),
 //              )],
 //            ),
-            child: cardItem(group1),),
+            child: cardItem(context,group1),),
         TextInputCustom()
         ],
       ),

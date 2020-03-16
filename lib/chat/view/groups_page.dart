@@ -16,19 +16,19 @@ class GroupsPage extends StatelessWidget {
     }else{
       return GridView.count(
         crossAxisCount: 2,
-        childAspectRatio: 4 / 4,
+        childAspectRatio: 3 / 4,
         children: List.generate(listGroup.length+1, (int index) {
           if (index == 0) {
             return cardAdd();
           }
-          return cardItem(listGroup[index-1]);
+          return cardItem(context,listGroup[index-1]);
         }),
       );
     }
   }
 }
 
-Widget cardItem(Group group) {
+Widget cardItem(BuildContext context,Group group) {
   return Padding(
     padding: const EdgeInsets.all(5.0),
     child: Container(
@@ -40,6 +40,9 @@ Widget cardItem(Group group) {
       child: Column(
         children: <Widget>[
           iconTopCard(group),
+          SizedBox(
+            height: MediaQuery.of(context).size.height/3*0.1,
+          ),
           contentCard(group),
         ],
       ),

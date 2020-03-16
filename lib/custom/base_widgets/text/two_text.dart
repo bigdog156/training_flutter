@@ -10,7 +10,7 @@ class TwoText extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      width: 250,
+      width: MediaQuery.of(context).size.width*0.55,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

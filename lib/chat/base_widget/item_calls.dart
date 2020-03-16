@@ -23,13 +23,13 @@ class ItemCall extends StatelessWidget {
             width: 10,
           ),
           Container(
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * 0.55,
             child: CallDetail(
               call: call,
             ),
           ),
           Container(
-            width: 110,
+            width: MediaQuery.of(context).size.width/5,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[

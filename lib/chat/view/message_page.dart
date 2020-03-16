@@ -6,7 +6,7 @@ import 'package:sophie/chat/models/message_current.dart';
 import 'package:sophie/chat/view/widget_nodata/no_data.dart';
 
 class MessagePage extends StatelessWidget {
-  final int stg = 1;
+  final int stg = 0;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

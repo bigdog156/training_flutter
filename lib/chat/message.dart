@@ -22,7 +22,11 @@ class _MessageState extends State<Message> {
         appBar: AppBar(
           title: Text(
             "All Chat",
-            style: TextStyle(fontSize: 30, color: Colors.white),
+            style: TextStyle(
+                fontSize: 30,
+                color: Colors.white, 
+                fontWeight: FontWeight.bold
+            ),
           ),
           actions: <Widget>[
             IconButton(
