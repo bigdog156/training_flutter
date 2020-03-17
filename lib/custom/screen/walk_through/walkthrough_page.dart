@@ -15,7 +15,9 @@ class WalkThroughPage extends StatelessWidget {
           children: <Widget>[
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, "/message");
+                Navigator.pushNamedAndRemoveUntil(
+                    context, "/message",
+                    ModalRoute.withName("/message"));
               },
               child: Container(
                 padding: EdgeInsets.only(
